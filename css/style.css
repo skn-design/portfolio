@@ -7,19 +7,23 @@
 
 /* 変数定義 */
 :root{
-    --color-text-main:#3d3d3c;
-    --color-text-sub:  #8d857d; 
-    --color-box:#fffefa;
+    --primary:#4f2a2a;
+    --secondly:  #8d857d; 
+    --color-box:#f7f7f7;
   
 }
 
 /* body基本設定 */
 body {
-    background: linear-gradient(-225deg, #dafff3 0%, #fff4e4 56%, #ffe5e7 100%);
+    background: radial-gradient(at 50% 50%, #ff7aa0 0%, #f7fe7b 100%);
+    background-image:
+    radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px),
+    radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-size: 3px 3px, 5px 5px;
     font-family: "Sawarabi Mincho", serif;
     font-size: 16px;
     line-height: 1.8;
-    color: var(--color-text-main);
+    color: var(--primary);
 }
 
 .inner {
@@ -33,15 +37,15 @@ h1{
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    color: var(--color-text-main);
+    color: var(--primary);
 }
 
 h2{
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 800;
     text-align: center;
     margin-top: 15vh;
-    color: var(--color-text-main);
+    color: var(--primary);
 }
 
 h3{
@@ -61,17 +65,21 @@ p {
   opacity: 0.5;
 }
 
+.top img{
+  width: 50px;
+}
+
 .header-wrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    color: var(--color-text-main);
+    color: var(--primary);
 }
 
 .header-nav ul{
     display: flex;
-    gap: 40px;
+    gap: 80px;
 }
 
 .header-nav ul li {
@@ -80,7 +88,7 @@ p {
 
 /* hoverした時の線 */
 .header-nav ul li::before{
-    background-color: #cda3ad;
+    background-color: #470a0a;
     content: "";
     width: 100%;
     height: 2px;
@@ -135,47 +143,58 @@ p {
   height: 90vh;
 }
 
-.slider {
+/* .slider {
   position: relative;
   overflow: hidden;
   height: 90vh;
   border-radius: 100px;
   max-width: 1300px;
   margin: 0 auto;
-}
+} */
 
 
 /* テキスト */
-.mainvisual-text {
-  position: absolute;
-  right: 20%;
-  bottom: 15%;
-  text-align: right;
-  color: #fffffc;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+.mainvisual {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  font-family: 'Sawarabi Mincho', serif;
 }
 
-.name {
-  font-size: 2.5rem;
+.mv-top{
+  font-size:80px;
+  font-weight: 800;
+  
+}
+
+.mainvisual-text .name {
+  font-size: 3rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.role {
-  font-size: 1rem;
+.mainvisual-text .role {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 /* =========================
    mainvisual slider
 ========================= */
 
+/*
 .slider {
   position: relative;
   width: 100%;
-  height: 90vh;         /* 高さは好きに調整 */
+  height: 90vh;     
   overflow: hidden;
 }
 
 /* 画像共通 */
+/*
 .slider img {
   position: absolute;
   inset: 0;
@@ -186,9 +205,10 @@ p {
 
   opacity: 0;
   animation: fadeSlide 12s infinite;
-}
+}*/
 
 /* 画像の切り替えタイミング */
+/*
 .slider img:nth-child(1) {
   animation-delay: 0s;
 }
@@ -200,8 +220,11 @@ p {
 .slider img:nth-child(3) {
   animation-delay: 8s;
 }
+*/
+
 
 /* フェードアニメーション */
+/*
 @keyframes fadeSlide {
   0% {
     opacity: 0;
@@ -219,7 +242,76 @@ p {
     opacity: 0;
   }
 }
+*/
 
+
+/* scroll */
+
+.scroll_down a{
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll_down a{
+  color: var(--primary);
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  display: block;
+  background-size: 14px auto;
+  z-index: 2;
+  text-decoration: none; 
+  transform: translate(-50%, -50%);
+}
+
+.scroll_down a:before {
+  position: absolute;
+  top: calc(50% + 24px);
+  left: calc(50% - 8px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid var(--primary);
+  border-width: 0px 0 2px 2px;
+  animation: bounce 2s linear infinite;
+}
+
+.scroll_down a:after {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--primary);
+  content: "";
+  border-radius: 50%;
+  top: calc(50% + 16px);
+  left: calc(50% - 19px);
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  70%,
+  80% {
+    -webkit-transform: translateY(0)rotate(-45deg);
+    -ms-transform: translateY(0)rotate(-45deg);
+    transform: translateY(0)rotate(-45deg);
+  }
+  40% {
+    -webkit-transform: translateY(-8px)rotate(-45deg);
+    -ms-transform: translateY(-8px)rotate(-45deg);
+    transform: translateY(-8px)rotate(-45deg);
+  }
+  60% {
+    -webkit-transform: translateY(-4px)rotate(-45deg);
+    -ms-transform: translateY(-4px)rotate(-45deg);
+    transform: translateY(-4px)rotate(-45deg);
+  }
+}
 
 
 /* =========================
@@ -234,7 +326,7 @@ p {
 
 .work-toptext{
   text-align: center;
-  padding-top: 40px;
+  padding: 30px 0 10px;
 }
 
 .work-banner ul{
@@ -262,12 +354,11 @@ p {
     object-fit: cover;
 }
 
-
 .banner-exp {
     position: absolute;
     bottom: 8px;
     right: 12px;
-    background: var(--color-text-sub);
+    background: var(--secondly);
     color: #fcfcfc;
     padding: 2px 7px;
     border-radius: 5px;
@@ -321,7 +412,7 @@ p {
     position: absolute;
     bottom: 15px;
     right: 15px;    
-    background: var(--color-text-sub);
+    background: var(--secondly);
     color: #fff;
     padding: 2px 7px;
     border-radius: 5px;
@@ -332,7 +423,7 @@ p {
     font-size: 20px;
     text-align: right;
     margin: 30px;
-    color: var(--color-text-main);
+    color: var(--primary);
 }
 
 .work-more:hover{
@@ -380,6 +471,9 @@ p {
     height: 100%;
     border-radius: 15px;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    opacity: 0; /* 最初は見えない */
+    transform: translateX(-50px); /* 左にずらしておく */
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .skill-content img{
@@ -391,13 +485,31 @@ p {
 }
 
 .skill-text{
-  color: var(--color-text-main);
+  color: var(--primary);
   line-height: 1.5;
   padding: 10px 0;
   text-align: left;
   display: inline-block;
 }
 
+/* 表示クラス */
+.skill-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 遅延用クラス（順番に出す） */
+.skill-content:nth-child(1) { transition-delay: 0.2s; }
+.skill-content:nth-child(2) { transition-delay: 0.4s; }
+.skill-content:nth-child(3) { transition-delay: 0.6s; }
+.skill-content:nth-child(4) { transition-delay: 0.8s; }
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /* =========================
     about
@@ -418,7 +530,7 @@ p {
 
 .about-exp{
     max-width: 480px;
-    color: var(--color-text-main);
+    color: var(--primary);
 }
 
 .about-wrap img{
@@ -622,6 +734,8 @@ small {
     }
 }
 
+
+
 /* =========================
    site page
 ========================= */
@@ -791,7 +905,7 @@ margin-top: 10vh;
   animation: loop-slide 30s infinite linear both;
 }
 
-/* alide animation */
+/* slide animation */
 @keyframes loop-slide {
   from {
     transform: translateX(0);
@@ -810,7 +924,7 @@ margin-top: 10vh;
 }
 
 .top-slide .content:nth-child(1) {
-  background-image: url(../image/more1.png);
+  background-image: url(../image/mylogo.svg);
 }
 .top-slide .content:nth-child(2) {
   background-image: url(../image/figma3D.png);
@@ -874,6 +988,33 @@ margin-top: 10vh;
 .scroll-fade.show{
   opacity:1;
   transform:translateY(0);
+}
+
+
+.more-work {
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  padding-top: 100px;
+  position: relative;
+  z-index: 2000;
+}
+
+.more-work ul {
+  display: flex;
+  gap:30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.more-work li img {
+  width: 530px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.more-work li img:hover {
+  transform: scale(1.05);
 }
 
 
