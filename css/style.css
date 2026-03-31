@@ -8,7 +8,7 @@
 /* 変数定義 */
 :root{
     --primary:#4f2a2a;
-    --secondly:  #8d857d; 
+    --secondly:  #645e58; 
     --color-box:#f7f7f7;
     --title:#333;
   
@@ -42,7 +42,7 @@ h1{
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 32px;
     font-weight: 800;
     text-align: center;
     margin-top: 15vh;
@@ -56,6 +56,14 @@ h3{
 
 p {
   font-size: 16px;
+}
+
+h5{
+  font-weight: 700;
+  font-size: 20px;
+  display: inline-block;
+  border-bottom: 1px solid #393131;
+  margin-bottom: 10px;
 }
 
 
@@ -347,18 +355,26 @@ p {
 
 .work-toptext{
   text-align: center;
-  padding: 30px 0 10px;
+  padding: 10px 0 20px;
+}
+
+.work-banner{
+  padding: 30px 0;
+}
+
+.work-banner>h5{
+  margin-bottom: 30px;
 }
 
 .work-banner ul{
     display: flex;
     gap: 30px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .banner {
     display: block;
-    width: 300px;
+    width: 330px;
     aspect-ratio: 1 / 1;   /* ← 正方形の決定打 */
     background: var(--color-box);
     border-radius: 10px;
@@ -368,7 +384,7 @@ p {
 }
 
 .banner img {
-    width: 200px;
+    width: 230px;
     aspect-ratio: 1 / 1; /* 正方形 */
     display: block;
     margin: 0 auto;
@@ -389,19 +405,20 @@ p {
 
 /* site */
 .work-site{
-    margin-top: 50px; 
+    padding: 50px 0; 
     
 }
 
 .work-site ul{
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
+    padding: 30px 0;
 }
 
 .work-site ul li{
   width: 450px;
-  height: 340px; /* ←固定が一番安定 */
+  height: 300px; /* ←固定が一番安定 */
   background: var(--color-box);
   border-radius: 15px;
   position: relative;
@@ -423,7 +440,7 @@ p {
 
 .site-img img{
   width: 100%;      /* ←これ追加 */
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   display: block;
 }
@@ -431,7 +448,7 @@ p {
 
 .site-exp{
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     right: 15px;    
     background: var(--secondly);
     color: #fff;
@@ -465,6 +482,10 @@ p {
 }
 
 /* movie */
+.movie{
+  padding: 30px 0;
+}
+
 .movie-container {
     margin-top: 50px;
 }
@@ -472,19 +493,16 @@ p {
 .movie ul {
     display: flex;
     justify-content: center;
-    list-style: none; /* 点を消す */
-    padding-top: 50px;
 }
 
 .movie ul li {
     width: 450px;
-    height: 340px;
+    height: 300px;
     background: var(--color-box);
     border-radius: 15px;
     position: relative;
-    padding: 15px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    transition: 0.3s;
+    padding: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card {
@@ -496,17 +514,14 @@ p {
 
 .movie-img {
     width: 100%;
-    aspect-ratio: 16 / 9; /* 動画の黄金比 */
+    height: 220px;
     overflow: hidden;
-    border-radius: 5px;
-    margin: 10px 0;
-    background: #000; /* 画像がない時の背景 */
 }
 
 .movie-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* これで枠いっぱいに画像が広がります */
+    height: 90%;
+    object-fit: cover;
     display: block;
 }
 
@@ -521,7 +536,7 @@ p {
 
 .movie-exp {
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     right: 15px;
     background: var(--secondly);
     color: #fff;
@@ -771,10 +786,10 @@ small {
 
 .button a{
     display: inline-block;
-    padding: 15px 15px;
+    padding: 15px 20px;
     border: 1px solid #615b5e;
     background-color: #615b5e;
-    border-radius: 100px;
+    border-radius: 50px;
     font-weight: bold;
     color: #fff;
     font-size: 14px;
@@ -1424,7 +1439,7 @@ footer{
 
   /* button */
 .button a {
-  padding: 5px 15px;
+  padding: 10px 15px;
   font-weight: normal;
 }
 
@@ -1531,6 +1546,10 @@ footer{
 ========================= */
 .slide-container{
   padding: 40px 0 60px;
+}
+
+.more-work li img{
+  width: 180px;
 }
 
 /* タイトル */
