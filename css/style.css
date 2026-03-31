@@ -460,7 +460,7 @@ h5{
 .work-more{
     font-size: 20px;
     text-align: right;
-    margin: 30px;
+    margin-right: 20px;
     color: var(--primary);
 }
 
@@ -1334,7 +1334,7 @@ h3{
 .work-site ul li {
   width: 90%;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .site-img {
