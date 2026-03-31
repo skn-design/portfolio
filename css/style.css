@@ -10,7 +10,7 @@
     --primary:#4f2a2a;
     --secondly:  #645e58; 
     --color-box:#f7f7f7;
-    --title:#333;
+    --title:#454545;
   
 }
 
@@ -42,11 +42,11 @@ h1{
 }
 
 h2{
-    font-size: 32px;
+    font-size: 72px;
     font-weight: 800;
-    text-align: center;
     margin-top: 15vh;
     color: var(--title);
+    line-height: 1;
 }
 
 h3{
@@ -64,6 +64,17 @@ h5{
   display: inline-block;
   border-bottom: 1px solid #393131;
   margin-bottom: 10px;
+}
+
+.section-title{
+  display: inline-block;
+}
+
+.title-jp {
+  font-size: 24px;
+  display: inline-block;
+  padding-bottom: 20px;
+  color: var(--secondly);
 }
 
 
@@ -459,6 +470,7 @@ h5{
 
 .work-more{
     font-size: 20px;
+    font-weight: 700;
     text-align: right;
     margin-right: 20px;
     color: var(--primary);
@@ -740,6 +752,12 @@ small {
   text-align: center;
 }
 
+.banner-wrap{
+  display: flex;
+  gap: 100px;
+  padding: 50px 0;
+}
+
 .banner-img{
   display: flex;
   gap: 20px;
@@ -753,7 +771,7 @@ small {
 }
 
 .banner-page img{
-  width: 400px;
+  width: auto;
   object-fit: cover;
   height: 400px;
   display: block;
@@ -764,14 +782,18 @@ small {
     font-weight: bold;
 }
 
+.work-detail{
+    display: flex;
+    flex-direction: column;
+}
+
 .detail-wrap{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .aim,.point{
-    max-width: 50%;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 .point1,.point2{
@@ -806,9 +828,7 @@ small {
 }
 
 .work-time{
-    display: flex;
-    justify-content: center;
-    margin: 30px;
+    padding: 20px 0;
 }
 
 /* work3 */
@@ -820,6 +840,7 @@ small {
   display: block;
   margin: 40px auto;
 }
+
 
 /* work-page animation */
 .banner-page{
