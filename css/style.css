@@ -1283,7 +1283,7 @@ body{
 
 h2{
   margin-top: 80px;
-  font-size: 1.3rem;
+  font-size: 48px;
 }
 
 h3{
@@ -1388,6 +1388,10 @@ h3{
   gap: 20px;
 }
 
+.project-title {
+  font-size: 16px;
+}
+
 /* SKILL → 2列2行 */
 .skill-wrap ul{
   flex-wrap: wrap;
@@ -1490,13 +1494,19 @@ footer{
   width: 90%;
   height: auto;
   margin: 30px auto;
+
+}
+
+.banner-wrap{
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
 }
 
 /* 制作時間 */
 .work-time{
   flex-direction: column;
   text-align: center;
-  margin: 20px 0;
 }
 
 /* 制作意図＋こだわり */
@@ -1515,7 +1525,7 @@ footer{
 /* 見出し */
 .aim h3,
 .point h3{
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 /* ul余白 */
