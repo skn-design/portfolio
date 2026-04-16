@@ -692,7 +692,7 @@ h4{
   padding-bottom: 30px;
 }
 
-/* .timeline-content:before {
+.timeline-content:before {
   content: "";
   width: 12px;
   height: 12px;
@@ -701,7 +701,7 @@ h4{
   left: 106px;
   top: 24px;
   border-radius: 100%;
-} */
+}
 
 
 /* mail */
